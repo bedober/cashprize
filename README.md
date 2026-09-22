@@ -2,4 +2,4 @@
 
 Android social media management app built with Kotlin and Jetpack Compose.
 
-Supported platforms: TikTok and YouTube.
+Supports TikTok and YouTube post drafts, video selection, publishing workflow, and deletion.
