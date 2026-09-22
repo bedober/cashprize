@@ -1,27 +1,19 @@
 # CashPrize Social Media Manager
 
-Android social media management app built with Kotlin and Jetpack Compose.
+Production-oriented Kotlin + Jetpack Compose Android app for managing Instagram, TikTok, YouTube, Facebook, X, and LinkedIn content.
 
-Supports major social channels, including:
-- Instagram
-- TikTok
-- YouTube
-- Facebook
-- X (Twitter)
-- LinkedIn
+Implemented:
+- Material 3 dashboard and account connection screens
+- Room database persistence for posts
+- Repository and ViewModel layers
+- OAuth browser flow entry points and deep-link callback
+- Retrofit API contracts for YouTube and TikTok upload flows
+- Publisher abstraction for all supported channels
 
-Features:
-- Create drafts with a caption, title, tags, and media
-- Upload media from device storage
-- Track publishing status and errors
-- Publish and delete content from a shared dashboard
-- Connect and manage multiple social accounts
+## Launch
 
-## Open in Android Studio
+Open the repository in Android Studio, sync Gradle, and run the `app` configuration.
 
-1. Open the repository folder in Android Studio.
-2. Let Gradle sync finish.
-3. Choose the `app` configuration and run the app.
-4. If Android Studio asks to install the Android SDK or Gradle plugin, confirm the prompts.
+## Required production configuration
 
-Note: OAuth/API credentials for TikTok, YouTube, Facebook, X, and LinkedIn are still placeholders and should be added before production publishing.
+Replace OAuth client placeholders in `OAuthManager`, register `cashprize://oauth/callback` with each provider, and exchange authorization codes in a secure backend. Never ship provider client secrets or long-lived access tokens in the APK. Complete provider app review and configure the API base URLs and authenticated Retrofit clients before enabling live publishing.
